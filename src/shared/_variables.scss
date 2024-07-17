@@ -1,0 +1,68 @@
+$color-green: #70e61c;
+$color-blue-light: #1cdae6;
+$color-blue-dark: #141d2f;
+$color-blue-dark-transparent: rgba(20, 29, 47, 0.8);
+$color-purple: #9747ff;
+
+$font-t1-mobile: (
+  font-family: "Poppins",
+  font-size: 45px,
+  font-weight: 700,
+  line-height: 54px,
+  text-align: center,
+);
+
+$font-t2-mobile: (
+  font-family: "Poppins",
+  font-size: 90px,
+  font-weight: 400,
+  line-height: 108px,
+  text-align: center,
+);
+
+$font-t5-mobile: (
+  font-family: Poppins,
+  font-size: 32px,
+  font-weight: 400,
+  line-height: 38.4px,
+  text-align: left,
+);
+
+$font-t4-mobile: (
+  font-family: Poppins,
+  font-size: 32px,
+  font-weight: 700,
+  line-height: 38.4px,
+  text-align: left,
+);
+
+$font-t6-mobile: (
+  font-family: Poppins,
+  font-size: 29px,
+  font-weight: 400,
+  line-height: 34.8px,
+  text-align: left,
+);
+
+$font-subtitles-mobile: (
+  font-family: Poppins,
+  font-size: 23px,
+  font-weight: 400,
+  line-height: 27.6px,
+  text-align: left,
+);
+
+$font-body: (
+  font-family: "Poppins",
+  font-size: 16px,
+  font-weight: 400,
+  line-height: 19.2px,
+  text-align: left,
+);
+@mixin apply-font($font-map) {
+  font-family: map-get($font-map, font-family);
+  font-size: map-get($font-map, font-size);
+  font-weight: map-get($font-map, font-weight);
+  line-height: map-get($font-map, line-height);
+  text-align: map-get($font-map, text-align);
+}

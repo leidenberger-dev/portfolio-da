@@ -1,0 +1,23 @@
+<section id="portfolio">
+  <h1>Portfolio</h1>
+  <p class="description">
+    Explore a selection of my work here - Interact with projects to see my
+    skills in action.
+  </p>
+  @for (project of projectList; track project.title) {
+  <div class="project">
+    <div class="project__image">
+      <img src="/images/{{ project.image }}" alt="{{ project.title }}" />
+    </div>
+    <h4 class="project__title">{{ project.title }}</h4>
+    <p class="project__stack">{{ project.stack }}</p>
+    <p class="project__description">
+      {{ project.description }}
+    </p>
+    <div class="project__buttons">
+      <button class="hero-button">Let's Talk!</button>
+      <button class="hero-button">Let's Talk!</button>
+    </div>
+  </div>
+  }
+</section>

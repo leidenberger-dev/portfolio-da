@@ -1,0 +1,70 @@
+@import "../../../shared/variables";
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 109px 28px 0 28px;
+  background-image: url("/images/shadow-portfolio.png");
+  background-size: contain;
+  background-position: center bottom 650px;
+  background-repeat: no-repeat;
+}
+
+.description {
+  text-align: center;
+}
+
+h1 {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-right: -28px;
+
+  &::after {
+    content: "";
+    display: block;
+    margin-left: 9px;
+    width: 75px;
+    height: 4px;
+    background-color: $color-purple;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 9px;
+    width: 20px;
+    height: 4px;
+    background-color: $color-purple;
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__image {
+    margin: 35px 0;
+    width: 100%;
+    & img {
+      width: 100%;
+    }
+  }
+
+  &__stack {
+    @include apply-font($font-subtitles-mobile);
+    margin-top: 15px;
+    color: $color-green;
+    width: 263px;
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+    margin: 15px 0 35px;
+  }
+}

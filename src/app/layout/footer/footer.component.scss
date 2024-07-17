@@ -1,0 +1,18 @@
+@import "../../../shared/variables";
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 4px solid $color-green;
+  padding: 66px 28px 73px 28px;
+}
+
+.logo2 {
+  @include apply-font($font-subtitles-mobile);
+}
+
+.copyright {
+  @include apply-font($font-subtitles-mobile);
+  margin: 54.86px 0 23px;
+}

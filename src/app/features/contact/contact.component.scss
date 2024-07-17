@@ -1,0 +1,39 @@
+@import "../../../shared/variables";
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 109px 28px 48.72px 28px;
+  position: relative;
+}
+
+h1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-left: -28px;
+
+  &::before {
+    content: "";
+    display: block;
+    margin-right: 9px;
+    width: 20px;
+    height: 4px;
+    background-color: $color-purple;
+  }
+}
+
+.subtitle {
+  @include apply-font($font-subtitles-mobile);
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.shadow {
+  position: absolute;
+  right: 0;
+  top: -290px;
+  z-index: -1;
+}
