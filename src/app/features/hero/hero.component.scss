@@ -19,17 +19,9 @@
   overflow: hidden;
 }
 
-#hero-shape {
-  position: absolute;
-  bottom: 18vh;
-  flex-shrink: 1;
-  width: 100%;
-  z-index: 1;
-}
-
 .slanted-shape {
   position: absolute;
-  bottom: 36%;
+  top: 528px;
   width: 626.756px;
   height: 467.434px;
   flex-shrink: 0;
