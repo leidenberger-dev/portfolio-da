@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './layout/header/header.component';
+import { HeaderComponent } from './features/header/header.component';
 import { HeroComponent } from './features/hero/hero.component';
 import { AboutComponent } from './features/about/about.component';
 import { SkillsComponent } from './features/skills/skills.component';
 import { PortfolioComponent } from './features/portfolio/portfolio.component';
 import { ContactComponent } from './features/contact/contact.component';
-import { FooterComponent } from './layout/footer/footer.component';
+import { FooterComponent } from './features/footer/footer.component';
 
 @Component({
   selector: 'app-root',
