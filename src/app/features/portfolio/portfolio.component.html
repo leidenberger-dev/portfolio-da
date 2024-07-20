@@ -15,8 +15,16 @@
       {{ project.description }}
     </p>
     <div class="project__buttons">
-      <button class="hero-button">Let's Talk!</button>
-      <button class="hero-button">Let's Talk!</button>
+      <app-button
+        [label]="'Live test'"
+        [style]="'tertiary'"
+        (onClick)="handleButtonClick()"
+      />
+      <app-button
+        [label]="'Github'"
+        [style]="'secondary'"
+        (onClick)="handleButtonClick()"
+      />
     </div>
   </div>
   }

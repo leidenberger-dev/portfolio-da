@@ -1,9 +1,11 @@
+import { ViewportScroller } from '@angular/common';
 import { Component } from '@angular/core';
+import { ButtonComponent } from '../../shared/components/button/button.component';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss',
 })
@@ -61,4 +63,10 @@ export class SkillsComponent {
     this.api,
     this.scrum,
   ];
+
+  constructor(private scroller: ViewportScroller) {}
+
+  handleButtonClick() {
+    this.scroller.scrollToAnchor('contact');
+  }
 }

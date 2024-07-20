@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { ButtonComponent } from '../../shared/components/button/button.component';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [],
+  imports: [ButtonComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
@@ -45,4 +46,8 @@ export class PortfolioComponent {
     github: 'https://github.com',
   };
   projectList = [this.join, this.sharkie, this.crm, this.pokedex];
+
+  handleButtonClick() {
+    window.open('https://google.com', '_blank');
+  }
 }
