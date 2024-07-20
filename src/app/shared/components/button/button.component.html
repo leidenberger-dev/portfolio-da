@@ -1,0 +1,11 @@
+<button
+  [class]="{
+    'btn-primary': style === 'primary',
+    'btn-secondary': style === 'secondary',
+    'btn-tertiary': style === 'tertiary',
+  }"
+  (click)="onClick.emit()"
+  [disabled]="disabled"
+>
+  {{ label }}
+</button>
