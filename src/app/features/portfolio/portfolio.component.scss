@@ -70,7 +70,7 @@ h1 {
 
   &__buttons {
     display: flex;
-    gap: 50px;
-    margin-top: 35px;
+    width: 100%;
+    justify-content: space-between;
   }
 }
