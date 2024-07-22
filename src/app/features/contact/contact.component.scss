@@ -37,3 +37,128 @@ h1 {
   top: -290px;
   z-index: -1;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  margin-top: 45px;
+
+  &__input {
+    position: relative;
+  }
+
+  &__error {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: -24px;
+
+    &--message {
+      margin-bottom: 0;
+    }
+  }
+
+  input,
+  textarea {
+    @include apply-font($font-body);
+    color: white;
+    width: 100%;
+    height: 40px;
+    padding: 15px 25px;
+    align-items: center;
+    border: 1px solid $color-purple;
+    border-radius: 5px;
+    background-color: transparent;
+
+    &.valid {
+      border: 1px solid $color-green !important;
+    }
+
+    &.invalid {
+      border: 1px solid #e61c40;
+    }
+
+    &::placeholder {
+      color: white;
+    }
+
+    &:focus,
+    &:hover {
+      outline: none;
+      border: 1px solid $color-blue-light;
+    }
+  }
+
+  textarea {
+    height: 162px;
+  }
+
+  app-button {
+    align-self: center;
+  }
+
+  &__checkbox {
+    margin-top: -20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    p {
+      margin-left: 8px;
+    }
+
+    input[type="checkbox"] {
+      display: none;
+
+      & + label {
+        width: 24px;
+        height: 24px;
+        background-image: url("/images/checkbox.png");
+        flex-shrink: 0;
+        cursor: pointer;
+
+        &:hover {
+          background-image: url("/images/checkbox-hover.png");
+        }
+      }
+
+      &:checked + label {
+        background-image: url("/images/checkbox-checked.png");
+
+        &:hover {
+          background-image: url("/images/checkbox-checked-hover.png");
+        }
+      }
+    }
+  }
+}
+
+.arrow-up {
+  display: flex;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  margin-top: 29px;
+  cursor: pointer;
+
+  & img {
+    width: 39px;
+    height: 39px;
+  }
+
+  &:hover,
+  &:active img {
+    content: url("/images/arrow-up-green.png");
+  }
+}
+
+.icon {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  width: 25px;
+  height: 25px;
+  pointer-events: none; /* Verhindert, dass das Bild das Klicken blockiert */
+}

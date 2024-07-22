@@ -7,6 +7,91 @@
     your ideas and contributing to your projects with my work.
     <br />
     <br />
-    Need a Frontend developer? Contact me!
+    Need a Frontend developer? <b> Contact me! </b>
   </p>
+  <form
+    class="contact-form"
+    [formGroup]="contactForm"
+    (ngSubmit)="handleSubmit()"
+  >
+    <div class="contact-form__input">
+      <label for="name"></label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        formControlName="name"
+        placeholder="Your name"
+        autocomplete="off"
+        [class]="getClass('name')"
+      />
+      @if (nameControl.touched && nameControl.invalid) {
+      <span><img class="icon" src="/images/error.png" alt="icon" /></span>
+      <p class="contact-form__error">Your name is required</p>
+      } @if ((nameControl.touched || nameControl.dirty) && nameControl.valid) {
+      <span><img class="icon" src="/images/done.png" alt="icon" /></span>
+      }
+    </div>
+
+    <div class="contact-form__input">
+      <label for="email"></label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        formControlName="email"
+        placeholder="Your email"
+        autocomplete="off"
+        [class]="getClass('email')"
+      />
+      @if (emailControl.touched && emailControl.invalid) {
+      <span><img class="icon" src="/images/error.png" alt="icon" /></span>
+      <p class="contact-form__error">Your email is required</p>
+      } @if ((emailControl.touched || emailControl.dirty) && emailControl.valid)
+      {
+      <span><img class="icon" src="/images/done.png" alt="icon" /></span>
+      }
+    </div>
+    <div class="contact-form__input">
+      <label for="message"></label>
+      <textarea
+        id="message"
+        name="message"
+        formControlName="message"
+        placeholder="Your message"
+        autocomplete="off"
+        [class]="getClass('message')"
+      ></textarea>
+      @if (messageControl.touched && messageControl.invalid) {
+      <span><img class="icon" src="/images/error.png" alt="icon" /></span>
+      <p class="contact-form__error contact-form__error--message">
+        Your message is empty
+      </p>
+      } @if ((messageControl.touched || messageControl.dirty) &&
+      messageControl.valid) {
+      <span><img class="icon" src="/images/done.png" alt="icon" /></span>
+      }
+    </div>
+    <div class="contact-form__checkbox">
+      <input
+        type="checkbox"
+        id="checkbox"
+        name="checkbox"
+        formControlName="checkbox"
+      />
+      <label for="checkbox"></label>
+      <p>
+        I've read the privacy policy and agree to the processing of my data as
+        outlined.
+      </p>
+    </div>
+    <app-button
+      [label]="'Send message :)'"
+      [disabled]="!contactForm.valid"
+      [type]="'submit'"
+    />
+  </form>
+  <div class="arrow-up" (click)="handleButtonClick()">
+    <img src="/images/arrow-up.png" alt="" />
+  </div>
 </section>
